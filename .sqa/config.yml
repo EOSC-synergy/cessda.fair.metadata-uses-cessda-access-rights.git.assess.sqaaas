@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights:
+      branch: main
+      repo: https://github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights git:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-amber-sloth.sh
+        container: qc.acc_breezy-buff-lemur
+  QC.Doc:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sloppy-lavender-gibbon.sh
+        container: qc.doc_squeaky-sapphire-hare
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights git:
+        commands:
+        - /usr/bin/env sh .sqa/script.paltry-amethyst-leopard.sh
+        container: qc.doc_muzzy-auburn-rat
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.stinky-wheat-dog.sh
+        container: qc.doc_lanky-ochre-tarantula
+  QC.Lic:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-cinnabar-antelope.sh
+        container: qc.lic_frumpy-myrtle-urchin
+  QC.Met:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.cozy-platinum-magpie.sh
+        container: qc.met_hazy-sapphire-bracke
+  QC.Sty:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-bronze-dollar.sh
+        container: qc.sty_sickly-aqua-opossum
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-zucchini-bison.sh
+        container: qc.sty_randy-buff-zonkey
+  QC.Ver:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sunny-bistre-bonobo.sh
+        container: qc.ver_greasy-persimmon-tarantula
+timeout: 5400
