@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights git:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-amber-sloth.sh
-        container: qc.acc_breezy-buff-lemur
+        - /usr/bin/env sh .sqa/script.shaggy-rust-deer.sh
+        container: qc.acc_sickly-apricot-tamarin
   QC.Doc:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-lavender-gibbon.sh
-        container: qc.doc_squeaky-sapphire-hare
+        - /usr/bin/env sh .sqa/script.messy-lime-stoat.sh
+        container: qc.doc_nippy-mustard-cheetah
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights git:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-amethyst-leopard.sh
-        container: qc.doc_muzzy-auburn-rat
+        - /usr/bin/env sh .sqa/script.woozy-persimmon-booby.sh
+        container: qc.doc_baggy-sangria-ladybird
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-wheat-dog.sh
-        container: qc.doc_lanky-ochre-tarantula
+        - /usr/bin/env sh .sqa/script.gamy-ecru-uakari.sh
+        container: qc.doc_fuzzy-sangria-wasp
   QC.Lic:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-cinnabar-antelope.sh
-        container: qc.lic_frumpy-myrtle-urchin
+        - /usr/bin/env sh .sqa/script.sleazy-orange-mandrill.sh
+        container: qc.lic_smelly-lime-koala
   QC.Met:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-platinum-magpie.sh
-        container: qc.met_hazy-sapphire-bracke
+        - /usr/bin/env sh .sqa/script.surly-bistre-meerkat.sh
+        container: qc.met_scummy-thistle-sponge
   QC.Sty:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-bronze-dollar.sh
-        container: qc.sty_sickly-aqua-opossum
+        - /usr/bin/env sh .sqa/script.sleazy-wheat-chin.sh
+        container: qc.sty_sleepy-rose-eagle
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-zucchini-bison.sh
-        container: qc.sty_randy-buff-zonkey
+        - /usr/bin/env sh .sqa/script.leaky-ivory-boar.sh
+        container: qc.sty_stinky-zucchini-dalmatian
   QC.Ver:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-access-rights get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-bistre-bonobo.sh
-        container: qc.ver_greasy-persimmon-tarantula
+        - /usr/bin/env sh .sqa/script.zippy-azure-quoll.sh
+        container: qc.ver_sleazy-beige-tortoise
 timeout: 5400
